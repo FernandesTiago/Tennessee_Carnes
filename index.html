@@ -27,7 +27,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     background: var(--bordo);
@@ -60,7 +59,6 @@
     background: var(--branco); border-radius: 2px; transition: .3s;
   }
 
-  /* HERO */
   .hero {
     min-height: 85vh; display: flex; align-items: center;
     justify-content: center; text-align: center;
@@ -98,7 +96,6 @@
   }
   .hero-cta:hover { background: var(--dourado-light); transform: translateY(-2px); }
 
-  /* SECTIONS */
   section { padding: 80px 24px; }
   .section-title {
     font-family: 'Playfair Display', serif;
@@ -111,7 +108,6 @@
   }
   .container { max-width: 1100px; margin: 0 auto; }
 
-  /* SOBRE */
   #sobre { background: var(--off-white); }
   .sobre-grid {
     display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start;
@@ -136,11 +132,20 @@
   .stat-number span { color: var(--dourado); }
   .stat-label { margin-top: 6px; font-size: .92rem; color: var(--cinza-leve); font-weight: 500; }
 
-  /* LOJAS */
   #lojas { background: var(--branco); }
   .lojas-grid {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px;
   }
+  .zona-title {
+    grid-column: 1 / -1;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--bordo);
+    padding: 16px 0 4px;
+    border-bottom: 2px solid var(--dourado);
+    margin-top: 16px;
+  }
+  .zona-title:first-of-type { margin-top: 0; }
   .loja-card {
     display: flex; align-items: flex-start; gap: 16px;
     padding: 20px 24px; border-radius: 12px;
@@ -159,7 +164,6 @@
   .loja-nome { font-weight: 700; font-size: 1rem; color: var(--bordo); margin-bottom: 4px; }
   .loja-endereco { font-size: .88rem; color: var(--cinza-leve); line-height: 1.5; }
 
-  /* CONTATO */
   #contato { background: var(--off-white); }
   .contato-wrapper { max-width: 700px; margin: 0 auto; }
   .form-card {
@@ -198,7 +202,6 @@
   }
   .form-success p { color: var(--cinza-leve); }
 
-  /* FOOTER */
   footer {
     background: var(--bordo); color: rgba(255,255,255,.6);
     text-align: center; padding: 32px 24px; font-size: .88rem;
@@ -206,7 +209,6 @@
   }
   footer strong { color: var(--dourado); font-weight: 600; }
 
-  /* MOBILE */
   @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-links {
@@ -268,8 +270,8 @@
     <p class="section-subtitle fade-in">Conheça a história por trás da qualidade Tennessee</p>
     <div class="sobre-grid">
       <div class="sobre-text fade-in">
-        <p>O <strong>Tennessee Carnes</strong> nasceu da paixão por oferecer carnes de altíssima qualidade com preço justo. Ao longo de mais de três décadas, nos consolidamos como referência no varejo de carnes na Grande São Paulo e Baixada Santista, sempre priorizando a procedência dos nossos produtos e a satisfação dos nossos clientes.</p>
-        <p>Com 26 unidades estrategicamente localizadas, levamos conveniência e qualidade ao dia a dia de milhares de famílias. Nosso compromisso vai além do balcão: investimos em equipes treinadas, higiene rigorosa e um atendimento que faz a diferença.</p>
+        <p>O <strong>Tennessee Carnes</strong> nasceu da paixão por oferecer carnes de altíssima qualidade com preço justo. Ao longo de mais de três décadas, nos consolidamos como referência no varejo de carnes na Grande São Paulo e litoral, sempre priorizando a procedência dos nossos produtos e a satisfação dos nossos clientes.</p>
+        <p>Com 26 unidades em São Paulo e região, levamos conveniência e qualidade ao dia a dia de milhares de famílias. Nosso compromisso vai além do balcão: investimos em equipes treinadas, higiene rigorosa e um atendimento que faz a diferença.</p>
         <div class="valores-list">
           <span class="valor-tag">Qualidade</span>
           <span class="valor-tag">Procedência</span>
@@ -302,13 +304,11 @@
     <h2 class="section-title fade-in">Nossas Lojas</h2>
     <p class="section-subtitle fade-in">Encontre a unidade Tennessee mais perto de você</p>
     <div class="lojas-grid">
-      <!-- LOJAS: Para adicionar uma loja, copie o bloco abaixo e troque nome/endereço -->
-      <!-- Para remover, apague o bloco inteiro da loja (de <div class="loja-card"> até </div></div>) -->
-
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Itaquera</div><div class="loja-endereco">Rua Padre Veigas Menezes, 445 — CEP 08220-510 — SP/SP</div></div>
-      </div>
+      <!-- ============================================================ -->
+      <!-- LOJAS: Para adicionar, copie um bloco loja-card e troque     -->
+      <!-- nome/endereço. Para remover, apague o bloco inteiro.         -->
+      <!-- ============================================================ -->
+      <h3 class="zona-title fade-in">Zona Sul</h3>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
         <div><div class="loja-nome">Super 13</div><div class="loja-endereco">Rua Largo 13 de Maio, 209/216 — CEP 04751-000 — SP/SP</div></div>
@@ -339,39 +339,11 @@
       </div>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Marechal</div><div class="loja-endereco">Av. Marechal Tito, 3500 — CEP 08160-495 — SP/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
         <div><div class="loja-nome">Cursino</div><div class="loja-endereco">Av. Cursino, 3516 — CEP 04132-002 — SP/SP</div></div>
       </div>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
         <div><div class="loja-nome">Heliópolis</div><div class="loja-endereco">Estrada das Lágrimas, 2100 — CEP 04243-000 — SP/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">São Vicente</div><div class="loja-endereco">Rua XV de Novembro, 289 — CEP 11310-400 — São Vicente/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Praia Grande</div><div class="loja-endereco">Av. Presidente Kennedy, 7473, Lj 08 — CEP 11704-100 — Praia Grande/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Guilhermina</div><div class="loja-endereco">Av. Presidente Kennedy, 2514 — CEP 11702-200 — Praia Grande/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Santos</div><div class="loja-endereco">Av. Nossa Senhora de Fátima, 816 — CEP 11085-202 — Santos/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">São Mateus</div><div class="loja-endereco">Av. Sapopemba, 13780 — CEP 08330-180 — SP/SP</div></div>
-      </div>
-      <div class="loja-card fade-in">
-        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Barueri</div><div class="loja-endereco">Estrada dos Romeiros, 1676 — CEP 06417-000 — Barueri/SP</div></div>
       </div>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
@@ -387,12 +359,26 @@
       </div>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Cubatão</div><div class="loja-endereco">Av. Nove de Abril, 2345 — CEP 11520-000 — Cubatão/SP</div></div>
+        <div><div class="loja-nome">Silva Bueno</div><div class="loja-endereco">Rua Silva Bueno, 2533 — CEP 04208-052 — SP/SP</div></div>
+      </div>
+      <h3 class="zona-title fade-in">Zona Leste</h3>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Itaquera</div><div class="loja-endereco">Rua Padre Veigas Menezes, 445 — CEP 08220-510 — SP/SP</div></div>
       </div>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Heitor</div><div class="loja-endereco">Rua Heitor Penteado, 1672 — CEP 05438-200 — SP/SP</div></div>
+        <div><div class="loja-nome">Marechal</div><div class="loja-endereco">Av. Marechal Tito, 3500 — CEP 08160-495 — SP/SP</div></div>
       </div>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">São Mateus</div><div class="loja-endereco">Av. Sapopemba, 13780 — CEP 08330-180 — SP/SP</div></div>
+      </div>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Industrial</div><div class="loja-endereco">Av. do Oratório, 4768 — CEP 03220-100 — SP/SP</div></div>
+      </div>
+      <h3 class="zona-title fade-in">Zona Norte</h3>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
         <div><div class="loja-nome">Freguesia</div><div class="loja-endereco">Av. Ministro Petronio Portela, 170 — CEP 02959-000 — SP/SP</div></div>
@@ -401,24 +387,41 @@
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
         <div><div class="loja-nome">Vila Maria</div><div class="loja-endereco">Rua Guilherme Cotching, 1920 — CEP 02113-017 — SP/SP</div></div>
       </div>
+      <h3 class="zona-title fade-in">Zona Oeste</h3>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Silva Bueno</div><div class="loja-endereco">Rua Silva Bueno, 2533 — CEP 04208-052 — SP/SP</div></div>
+        <div><div class="loja-nome">Heitor</div><div class="loja-endereco">Rua Heitor Penteado, 1672 — CEP 05438-200 — SP/SP</div></div>
+      </div>
+      <h3 class="zona-title fade-in">Grande São Paulo</h3>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Barueri</div><div class="loja-endereco">Estrada dos Romeiros, 1676 — CEP 06417-000 — Barueri/SP</div></div>
+      </div>
+      <h3 class="zona-title fade-in">Litoral</h3>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Santos</div><div class="loja-endereco">Av. Nossa Senhora de Fátima, 816 — CEP 11085-202 — Santos/SP</div></div>
       </div>
       <div class="loja-card fade-in">
         <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
-        <div><div class="loja-nome">Industrial</div><div class="loja-endereco">Av. do Oratório, 4768 — CEP 03220-100 — SP/SP</div></div>
+        <div><div class="loja-nome">São Vicente</div><div class="loja-endereco">Rua XV de Novembro, 289 — CEP 11310-400 — São Vicente/SP</div></div>
+      </div>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Praia Grande</div><div class="loja-endereco">Av. Presidente Kennedy, 7473, Lj 08 — CEP 11704-100 — Praia Grande/SP</div></div>
+      </div>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Guilhermina</div><div class="loja-endereco">Av. Presidente Kennedy, 2514 — CEP 11702-200 — Praia Grande/SP</div></div>
+      </div>
+      <div class="loja-card fade-in">
+        <div class="loja-icon"><svg fill="none" viewBox="0 0 24 24" stroke="#D4A843" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+        <div><div class="loja-nome">Cubatão</div><div class="loja-endereco">Av. Nove de Abril, 2345 — CEP 11520-000 — Cubatão/SP</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- FORMULÁRIO DE CONTATO — Integrado com Web3Forms               -->
-<!-- Os emails chegam no endereço configurado na conta Web3Forms   -->
-<!-- Para trocar o email de destino: gere nova key em web3forms.com -->
-<!-- e substitua o value do access_key abaixo                      -->
-<!-- ============================================================ -->
 <section id="contato">
   <div class="container">
     <h2 class="section-title fade-in">Fale Conosco</h2>
@@ -426,12 +429,10 @@
     <div class="contato-wrapper">
       <div class="form-card fade-in">
         <form action="https://api.web3forms.com/submit" method="POST" id="contato-form">
-          <!-- Web3Forms Config -->
           <input type="hidden" name="access_key" value="762c4c7c-f70d-4fa2-8732-f1fa66a24c64">
           <input type="hidden" name="from_name" value="Site Tennessee Carnes">
           <input type="hidden" name="subject" id="email-subject" value="Novo contato pelo site">
           <input type="checkbox" name="botcheck" style="display:none">
-
           <div class="form-row">
             <div class="form-group">
               <label>Nome</label>
@@ -482,23 +483,16 @@
 </footer>
 
 <script>
-  // Nav shadow on scroll
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
   });
-
-  // Fade-in animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Mobile menu close on link click
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
   });
-
-  // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY + 100;
@@ -508,18 +502,12 @@
       if (link) link.classList.toggle('active', scrollY >= top && scrollY < top + height);
     });
   });
-
-  // Web3Forms: update email subject with tipo + assunto
   const form = document.getElementById('contato-form');
   form.addEventListener('submit', function(e) {
+    e.preventDefault();
     const tipo = document.getElementById('tipo-contato').value;
     const assunto = document.getElementById('assunto-input').value;
     document.getElementById('email-subject').value = '[' + tipo + '] ' + assunto;
-  });
-
-  // Web3Forms: handle response
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
     const data = new FormData(form);
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
